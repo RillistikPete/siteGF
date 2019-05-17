@@ -1,197 +1,87 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Welcome To gavinfpk.com/me!</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- My custom Gavin CSS -->
-    <link rel="stylesheet" type="text/css" href="css/gavin.css">
-
-    <!-- Custom styles for this template -->
-    <link href="css/freelancer.min.css" rel="stylesheet">
-
-  </head>
-
-  @{
-    string[] array = new string[]{};
+﻿  @{
     
-    IList<string> techList = new List<string>()
-    {
-        "Angular",
-        "Bootstrap",
-        "Bower",
-        "C#",
-        ".NET",
-        "CSS3",
-        "Django",
-        "Firebase",
-        "Git",
-        "GitHub",
-        "Grunt",
-        "Handlebars",
-        "HTML5",
-        "JavaScript",
-        "jQuery",
-        "Laravel",
-        "LINQ",
-        "mySQL",
-        "NPM",
-        "Python",
-        "SSMS",
-        "Visual Studio",
-        "Visual Studio for Mac",
-    };
-
-
-
-    IList<string> imageList = new List<string>()
-    {
-        "angular-icon.svg",
-        "bootstrap.svg",
-        "bower.svg",
-        "Clogo.jpg",
-        "dotnet.svg",
-        "css-3.svg",
-        "django.png",
-        "firebase.svg",
-        "git.svg",
-        "github-octocat.svg",
-        "grunt.svg",
-        "handlebars.svg",
-        "html-5.svg",
-        "javascript.png",
-        "jquery.svg",
-        "laravel.png",
-        "yfiYW8H.jpg",
-        "mysql.jpg",
-        "npm.svg",
-        "python.png",
-        "SSMS",
-        "visual-studio.svg",
-        "vs4mac.png",
-    };
-
-
+    Dictionary<string, string> techList = new Dictionary<string, string>();
+        techList.Add("Angular","angular-icon.svg");
+        techList.Add("Bootstrap","bootstrap.svg");
+        techList.Add("C#","Clogo.jpg");
+        techList.Add(".NET", "dotnet.svg");
+        techList.Add("CSS3","css-3.svg");
+        techList.Add( "Django","django.png");
+        techList.Add("Firebase", "firebase.svg");
+        techList.Add("Git","git.svg");
+        techList.Add( "GitHub","github-octocat.svg");
+        techList.Add("Grunt", "grunt.svg");
+        techList.Add("Handlebars","handlebars.svg");
+        techList.Add("HTML5","html-5.svg");
+        techList.Add("JavaScript","javascript.png");
+        techList.Add("jQuery","jquery.svg");
+        techList.Add("Laravel", "laravel.png");
+        techList.Add("LINQ","yfiYW8H.jpg");
+        techList.Add("mySQL","mysql.jpg");
+        techList.Add("NPM","npm.svg");
+        techList.Add("SSMS","SSMS.png");
+        techList.Add( "Visual Studio","visual-studio.svg");
+        techList.Add("Visual Studio for Mac","vs4mac.png");
   }
 
-  <body id="page-top">
-
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-center fixed-top" id="mainNav">
-
-          <ul class="navbar-nav navbar-center  ml-auto">
-              <li class="nav-item">
-                <a class="nav-link js-scroll-trigger hov" href="#projects">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link js-scroll-trigger hov" href="/laravel">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link js-scroll-trigger hov" href="#contact">Contact</a>
-              </li>
-          </ul>
-
-          <ul class="list-inline">
-                <li class="list-inline-item">
-                  <a class="btn-social btn-outline" target="_blank" href="https://www.linkedin.com/in/gavin-forrest-345b05143/">
-                    <i class="fa fa-fw fa-linkedin"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="btn-social btn-outline" target="_blank" href="https://github.com/RillistikPete">
-                    <i class="fa fa-fw fa-github"></i>
-                  </a>
-                </li>
-          </ul>
-
-      </nav>
-
-
-      
-<!--  HEADER  -->
     <section class="" style="width:100%;">
       <div class="row">
             <div class="intro-text text-center col-lg-12">
+              <span class="name" style="font-size:2em;">Gavin</span>
                     <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-              <span class="name" style="font-size:3em;color:white;">Gavin Forrest</span>
-                    <br>
-              <span class="skills" style="font-size:1.5em;color:white;">Software Developer</span>
+              <span class="skills" style="font-size:1.2em;">Software Developer</span>
+              <br>
+              <br>
+              <img src="~/img/techimgs/Gavin-4.jpg" height="100" width="150" style="border-radius:60%;" alt="Me"/>
             </div>
-
-              <!-- <div class="col-sm-2" style="margin-top:80px;">
-                <img style="border-radius:50px;" src="techimgs/meNSS.jpg" height="200" width="" alt="" class="img-rounded">
-              </div> -->
-
       </div>
     </section>
 
 
     <!-- PROJECTS SECTION -->
-    <section class="projects" id="projects">
+    <section class="projects" id="projects" style="margin-top:50px;">
       <div class="container">
 
-        <div class="text-center">
+        <div class="panel text-center">
 
-            <h2 class="text-center">Projects</h2>
+    <a data-toggle="collapse" href="#collapse_projects" role="button" aria-expanded="false" aria-controls="collapse_projects">
+      <h2 class="panel-heading panel-title text-center">Projects</h2>
+    </a>
+      
             <hr>
-            <hr>
+    <div id="collapse_projects" class="collapse">
 
-            <br>
-            <br>
-            <br>
-            <div class="text-center">
-            <blockquote class="blockquote"><h3 style="vertical-align:middle;margin:auto;">Workout Tracker</h3></blockquote>
-            <br>
+            <div class="col-lg-12 col-md-10 col-sm-6 text-center">
+                <blockquote class="blockquote"><h3 style="vertical-align:middle;m-t-20;">Workout Tracker</h3></blockquote>
+                  <br>
             </div>
-            <a target="_blank" href="http://workouttracker.life"><img src="techimgs/workttrcker.png" alt="" height="400" width="700"></a>
+            <a target="_blank" href="http://workouttracker.life"><img class="shrink-xs" src="~/img/techimgs/workttrcker.png" alt="" height="400" width="700"></a>
 
-            <hr>
-            <br>
-            <br>
-            <br>
+                
             <div class="text-center">
-            <blockquote class="blockquote"><h3 style="vertical-align:middle;">Medical Portal</h3></blockquote>
-            <br>
+                <br><br>
+                <blockquote class="blockquote"><h3 style="vertical-align:middle;">Medical Portal</h3></blockquote>
+                <br>
             </div>
-            <a target="_blank" href="https://github.com/RillistikPete/BackEnd-Capstone"><img src="techimgs/MedicalPortal.png" alt="" height="400" width="700"></a>
-            
-            <hr>
-            <br>
-            <br>
-            <br>
+            <a target="_blank" href="https://github.com/RillistikPete/BackEnd-Capstone"><img class="shrink-xs" src="~/img/techimgs/MedicalPortal.png" alt="" height="400" width="700"></a>
+                <br>
             <div class="text-center">
-            <blockquote class="blockquote"><h3 style="vertical-align:middle;">Laravel Blog</h3></blockquote>
-            <br>
+              <br><br>
+                <blockquote class="blockquote"><h3 style="vertical-align:middle;">Laravel Blog</h3></blockquote>
+                <br>
             </div>
-            <a target="_blank" href="/"><img src="techimgs/amazon-nashville.png" alt="" height="400" width="700"></a>
-            
-            <hr>
-            <br>
-            <br>
-            <br>
+            <a target="_blank" href="/"><img class="shrink-xs" src="~/img/techimgs/amazon-nashville.png" alt="" height="400" width="700"></a>
+                <br>
             <div class="text-center">
-            <blockquote class="blockquote"><h3 style="vertical-align:middle;">Music Player Site Template</h3></blockquote>
-            <br>
+              <br><br>
+                <blockquote class="blockquote"><h3 style="vertical-align:middle;">Music Player Site Template</h3></blockquote>
+                <br>
             </div>
-            <a target="_blank" href="https://github.com/RillistikPete/MusicApplication"><img src="techimgs/ssmusicapp.png" alt="" height="400" width="700"></a>
+            <a target="_blank" href="https://github.com/RillistikPete/MusicApplication"><img class="shrink-xs" src="~/img/techimgs/ssmusicapp.png" alt="" height="400" width="700"></a>
         
+    </div> <!-- collapse-projects -->
+
+
         </div>
       </div>
     </section>
@@ -199,153 +89,61 @@
     <hr>
     <!-- Portfolio Grid Section -->
     <section id="portfolio">
-      <div class="container">
         <h2 class="text-center">Technologies</h2>
         <hr>
         <div class="row">
-
-
-            @foreach(var imgName in techList)
+          <!-- need location path here for src or no? -->
+            @foreach(var imgPath in techList)
             {
-                <figure class="col-lg-2 col-md-2 col-sm-4 col-xs-4 portfolio-item">
-                    <img id="img-fig" src="" class="img-fig" height="55px" width="55px" alt=""/>
-                    <figcaption>@imgName</figcaption>
+                <figure class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                    <img id="img-fig" src="~/img/techimgs/@imgPath.Value" class="img-fig" height="55px" width="55px" alt=""/>
+                    <figcaption>@imgPath.Key</figcaption>
                 </figure>
             }
-
-            <script>
-              var images = {
-                "angular-icon.svg",
-                "bootstrap.svg",
-                "bower.svg",
-                "Clogo.jpg",
-                "dotnet.svg",
-                "css-3.svg",
-                "django.png",
-                "firebase.svg",
-                "git.svg",
-                "github-octocat.svg",
-                "grunt.svg",
-                "handlebars.svg",
-                "html-5.svg",
-                "javascript.png",
-                "jquery.svg",
-                "laravel.png",
-                "yfiYW8H.jpg",
-                "mysql.jpg",
-                "npm.svg",
-                "python.png",
-                "SSMS",
-                "visual-studio.svg",
-                "vs4mac.png",
-                };
-
-               var tagForEachImg = $("#img-fig");
-               var location = "techimgs/";
-
-               foreach (var img in images){
-                 tagForEachImg.attr("src") =  (location + img);
-               }
-            </script>
-             
-            
-
         </div>
-      </div>
     </section>
 
 
     <!-- About Section -->
     <section class="success" id="about">
-      <div class="container">
-        <h2 class="text-center">About Me</h2>
-        <hr>
-        <div class="row">
-          <div class="text ml-auto" style="text-align:justify;">
-            <blockquote><p>
+      <hr>
+      <br>
+      <div style="margin-top:20px;margin-bottom:50px;">
+        <p class="text-center">
+            <button class="btn btn-lg btn-primary" type="button" data-toggle="collapse" data-target="#about_content" aria-expanded="false" aria-controls="about_content">About Me</button>
+              <div class="card card-body collapse" id="about_content">
               I am a graduate of NC State University and I am fluent in Spanish. 
               I also studied C# and JavaScript at Nashville Software School. 
               I find learning-patterns to be a strength of mine. I apply this skill 
               to learning software languages, where there is always a problem to solve;  
                this field keeps me craving more knowledge and tricks that help me in the workplace and in my own life.
                I also play the drums and have been making music as a hobby for over a decade.
-            </p></blockquote>
-          </div>
-          </div>
-        </div>
+              </div>
+        </p>
+      </div>
+      <hr>
     </section>
-
-
-
-   <!-- Contact Section -->
-     <!-- <section id="contact">
-      <div class="container">
-          <h2 class="text-center">Contact Me</h2>
-        <hr>
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-
-            <form role="form" action="contact_me.php" method="POST" enctype="text/plain">
-
-              the redirect_to is optional, the form will redirect to the referrer on submission 
-              <input type='hidden' name='redirect_to' value='' />
-
-               input fields 
-              <label>Name:</label>
-              <input type='text' name='name' id="name" class="form-control" placeholder="Your Name" required/> <br>
-              <label>Email:</label>
-              <input type='email' name='email' id="email" class="form-control" placeholder="Your Email" required/> <br>
-              <label>Message:</label>
-              <textarea name='message' id="message" class="form-control" placeholder="Your Message" row="4" required></textarea>
-              <br>
-              <input type='submit' id="sendMessageButton" class="form-control submit" value="Send Message" />
-
-            </form>
-
-          </div>
-        </div>
-    </section> -->
-    <!-- End of Contact Form -->
 
     <!-- Footer -->
     <section id="contact">
     <footer class="text-center">
-      <div class="footer-above">
-        <div class="container">
-          <div class="row">
-            <div class="footer-col col-md-4">
-            </div>
-            <div class="footer-col col-md-4">
-              <h3>On the Web</h3>
+
+              <h3 style="margin-top:40px;margin-bottom:20px;">On the Web</h3>
               <br>
-              <p>petergforrest91@gmail.com</p>
-              <ul class="list-inline-footer">
+              <p class="">petergforrest91&#64gmail.com</p>
+              <ul class="list-inline-footer text-center" style="margin-right:25px;">
                 <li class="list-inline-item">
-                  <a class="btn-social btn-outline" target="_blank" href="https://www.linkedin.com/in/peter-forrest-345b05143/">
-                    <i class="fa fa-fw fa-linkedin"></i>
+                  <a class="btn-social btn-outline" target="_blank" href="https://www.linkedin.com/in/gavin-forrest-345b05143/">
+                    <i class="fab fa-linkedin fa-5x"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
                   <a class="btn-social btn-outline" target="_blank" href="https://github.com/RillistikPete">
-                    <i class="fa fa-fw fa-github"></i>
+                    <i class="fab fa-github fa-5x"></i>
                   </a>
                 </li>
               </ul>
-            </div>
-            <div class="footer-col col-md-4">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-below">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
               Copyright &copy; GF 2017
-            </div>
-          </div>
-        </div>
-      </div>
     </footer>
   </section>
 
@@ -356,287 +154,4 @@
       </a>
     </div>
 
-    <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <h2>Project Title</h2>
-                  <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="img/portfolio/cabin.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                  <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
-                  </ul>
-                  <button class="btn btn-success" type="button" data-dismiss="modal">
-                    <i class="fa fa-times"></i>
-                    Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <h2>Project Title</h2>
-                  <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="img/portfolio/cake.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                  <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
-                  </ul>
-                  <button class="btn btn-success" type="button" data-dismiss="modal">
-                    <i class="fa fa-times"></i>
-                    Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <h2>Project Title</h2>
-                  <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="img/portfolio/circus.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                  <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
-                  </ul>
-                  <button class="btn btn-success" type="button" data-dismiss="modal">
-                    <i class="fa fa-times"></i>
-                    Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <h2>Project Title</h2>
-                  <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="img/portfolio/game.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                  <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
-                  </ul>
-                  <button class="btn btn-success" type="button" data-dismiss="modal">
-                    <i class="fa fa-times"></i>
-                    Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <h2>Project Title</h2>
-                  <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="img/portfolio/safe.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                  <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
-                  </ul>
-                  <button class="btn btn-success" type="button" data-dismiss="modal">
-                    <i class="fa fa-times"></i>
-                    Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <h2>Project Title</h2>
-                  <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="img/portfolio/submarine.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                  <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
-                  </ul>
-                  <button class="btn btn-success" type="button" data-dismiss="modal">
-                    <i class="fa fa-times"></i>
-                    Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/freelancer.min.js"></script>
-
-  </body>
-
-</html>
+  

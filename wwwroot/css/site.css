@@ -17,6 +17,25 @@ html {
     font-size: 16px;
   }
 }
+@media screen and (max-width: 700px) {
+  img.shrink-xs {
+       height: 228px;
+       width: 400px;
+  }
+}
+
+figure{
+  text-align: center;
+}
+
+.shrink-xs {
+  border-radius:5px !important;
+}
+
+a.nav-link.text-dark:hover {
+  background-color:blue;
+  color:white !important;
+}
 
 .border-top {
   border-top: 1px solid #e5e5e5;
