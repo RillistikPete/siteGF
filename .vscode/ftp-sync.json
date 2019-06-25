@@ -1,0 +1,27 @@
+{
+    "remotePath": "./",
+    "host": "107.180.4.165",
+    "username": "ph18425427823",
+    "password": "Fuck420pKuc$",
+    "port": 21,
+    "secure": false,
+    "protocol": "ftp",
+    "uploadOnSave": false,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "agent": null,
+    "allow": [],
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store"
+    ],
+    "generatedFiles": {
+        "extensionsToInclude": [
+            ""
+        ],
+        "path": "http://www.petegavin.co"
+    }
+}
